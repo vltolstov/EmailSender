@@ -86,4 +86,4 @@ StarWind V2V.</p>
 
 <p>Далее необходимо установить DSM.
 Инструкция по установке и настройке 
-<a href="https://github.com/vltolstov/EmailSender/Synology">здесь</a>.</p>
+<a href="https://github.com/vltolstov/EmailSender/tree/master/Synology">здесь</a>.</p>

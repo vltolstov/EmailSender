@@ -14,9 +14,13 @@
 
 <img src="imgs/img-3.jpg" width="923" height="612"/>
 
+<p>Далее необходимо выбрать файл DSM_DS3615xs_25426.pat</p>
+
 <img src="imgs/img-5.jpg" width="899" height="509"/>
 
 <img src="imgs/img-6.jpg" width="1169" height="672"/>
+
+<p>Настройку QuickConnect можно пропустить</p>
 
 <img src="imgs/img-7.jpg" width="995" height="604"/>
 
@@ -41,6 +45,8 @@
 <img src="imgs/img-17.jpg" width="1003" height="600"/>
 
 <img src="imgs/img-18.jpg" width="1001" height="600"/>
+
+<p>Теперь необхоидмо перейти в Центр Пакетов</p>
 
 <img src="imgs/img-19.jpg" width="1064" height="583"/>
 
