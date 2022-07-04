@@ -20,7 +20,7 @@
 
 <img src="imgs/img-6.jpg" width="1169" height="672"/>
 
-<p>Настройку QuickConnect можно пропустить</p>
+<p>Настройку QuickConnect можно пропустить.</p>
 
 <img src="imgs/img-7.jpg" width="995" height="604"/>
 
