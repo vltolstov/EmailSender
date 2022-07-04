@@ -2,10 +2,7 @@
 
 <p>Понадобится:</p>
 <ul>
-    <li><a href="https://mega.nz/#!OV4gVKyZ!dCgfXx1bgAOyvbFwFiov3s7RSNoFuqnAcNmSllLoUiw">Загрузчик v1.03b для 3615xs</a></li>
-    <li><a href="https://xpenology.com/forum/topic/12952-dsm-62-loader">Альтернативная ссылка на загрузчик</a> </li>
     <li><a href="https://global.download.synology.com/download/DSM/release/6.2.3/25426/DSM_DS3615xs_25426.pat">DSM 6.2.3</a></li>
-    <li><a href="https://rsload.net/soft/cam/19372-starwind-v2v-converter.html">StarWind V2V 9.0.167 - для преобразования образов</a></li>
 </ul>
 
 <p>После запуска сервера переходим <a href="https://find.synology.com/">https://find.synology.com/</a></p>

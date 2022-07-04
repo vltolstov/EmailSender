@@ -4,6 +4,13 @@
 <a href="https://www.virtualbox.org/wiki/Download_Old_Builds_6_1">https://www.virtualbox.org/wiki/Download_Old_Builds_6_1</a><br>
 Дальнейшяя инструкция показана на примере установки версии 6.1.34</p>
 
+<p>Понадобится:</p>
+<ul>
+    <li><a href="https://mega.nz/#!OV4gVKyZ!dCgfXx1bgAOyvbFwFiov3s7RSNoFuqnAcNmSllLoUiw">Загрузчик v1.03b для 3615xs</a></li>
+    <li><a href="https://xpenology.com/forum/topic/12952-dsm-62-loader">Альтернативная ссылка на загрузчик</a> </li>
+    <li><a href="https://rsload.net/soft/cam/19372-starwind-v2v-converter.html">StarWind V2V 9.0.167 - для преобразования образов</a></li>
+</ul>
+
 <img src="imgs/img-1.jpg" width="494" height="388" />
 
 <img src="imgs/img-2.jpg" width="498" height="390" />
@@ -37,6 +44,10 @@
 <img src="imgs/img-15.jpg" width="960" height="553"/>
 
 <img src="imgs/img-16.jpg" width="960" height="550" />
+
+<p>На данном этапе у вас должен быть скачанный файл загрузчика synoboot.img. 
+Его необходимо преобразовать в формат файла vmdk с помощью программы 
+StarWind V2V.</p>
 
 <img src="imgs/img-17.jpg" width="597" height="468" />
 
@@ -73,4 +84,5 @@
 <img src="imgs/img-28.jpg" width="962" height="552" />
 
 <p>Далее необходимо установить DSM.
-Инструкция по установке и настройке здесь.</p>
+Инструкция по установке и настройке 
+<a href="https://github.com/vltolstov/EmailSender/Synology">здесь</a>.</p>
