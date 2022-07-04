@@ -4,13 +4,6 @@
 <a href="https://www.virtualbox.org/wiki/Download_Old_Builds_6_1">https://www.virtualbox.org/wiki/Download_Old_Builds_6_1</a><br>
 Дальнейшяя инструкция показана на примере установки версии 6.1.34</p>
 
-<p>Понадобится:</p>
-<ul>
-    <li><a href="https://mega.nz/#!OV4gVKyZ!dCgfXx1bgAOyvbFwFiov3s7RSNoFuqnAcNmSllLoUiw">Загрузчик v1.03b для 3615xs</a></li>
-    <li><a href="https://xpenology.com/forum/topic/12952-dsm-62-loader">Альтернативная ссылка на загрузчик</a> </li>
-    <li><a href="https://rsload.net/soft/cam/19372-starwind-v2v-converter.html">StarWind V2V 9.0.167 - для преобразования образов</a></li>
-</ul>
-
 <img src="imgs/img-1.jpg" width="494" height="388" />
 
 <img src="imgs/img-2.jpg" width="498" height="390" />
@@ -28,6 +21,14 @@
 <img src="imgs/img-8.jpg" width="964" height="552" />
 
 <h2>Добавление и настройка виртуальной машины</h2>
+
+<p>Понадобится:</p>
+
+<ul>
+    <li><a href="https://mega.nz/#!OV4gVKyZ!dCgfXx1bgAOyvbFwFiov3s7RSNoFuqnAcNmSllLoUiw">Загрузчик v1.03b для 3615xs</a></li>
+    <li><a href="https://xpenology.com/forum/topic/12952-dsm-62-loader">Альтернативная ссылка на загрузчик</a> </li>
+    <li><a href="https://rsload.net/soft/cam/19372-starwind-v2v-converter.html">StarWind V2V 9.0.167 - для преобразования образов</a></li>
+</ul>
 
 <img src="imgs/img-9.jpg" width="964" height="555" />
 
