@@ -57,4 +57,4 @@
 <img src="imgs/img-25.jpg" width="950" height="568"/>
 
 
-<p>Как добавить адресные книги и контакты здесь.</p>
+<p>Как добавить адресные книги и контакты <a href="https://github.com/vltolstov/EmailSender/tree/master/SynologyContacts">здесь</a>.</p>

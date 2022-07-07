@@ -25,7 +25,7 @@
  использование других средств. Вы также можете развернуть Synology DSM на 
  реальном сервере или использовать NAS Synology. В случае последнего 
  варианта, можно пропустить этапы настройки VirtualBox.</p>
- <p>Инструкции по настройке и установке здесь</p>
+ <p>Инструкции по настройке и установке <a href="https://github.com/vltolstov/EmailSender/tree/master/VirtualBox">здесь</a></p>
  
  
  <h3>Synology DSM 6.2.3</h3>
@@ -34,7 +34,13 @@
  6.2.3 выбрана как последняя, наиболее стабильная в среде VirtualBox. В 
  случае использования других серверов, возможно использование DSM 7-ых 
  версий.</p>
- <p>Инструкции по настройке и установке здесь</p>
+ <p>Инструкции по настройке и установке <a href="https://github.com/vltolstov/EmailSender/tree/master/Synology">здесь</a></p>
+ 
+ 
+ <h3>Synology Contacts</h3>
+ <p>Пакет - основа для CardDav протокола и веб-интерфейс 
+ для управления контактами и адресными книгами.</p>
+<p>Инструкции по настройке и установке <a href="https://github.com/vltolstov/EmailSender/tree/master/SynologyContacts">здесь</a></p>
  
  
  <h3>CardDav Export</h3>
