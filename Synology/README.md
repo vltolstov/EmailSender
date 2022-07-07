@@ -14,7 +14,7 @@
 
 <img src="imgs/img-3.jpg" width="923" height="612"/>
 
-<p>Далее необходимо выбрать файл DSM_DS3615xs_25426.pat</p>
+<p>Выбираем файл DSM_DS3615xs_25426.pat</p>
 
 <img src="imgs/img-5.jpg" width="899" height="509"/>
 
