@@ -5,7 +5,7 @@
     <li><a href="https://global.download.synology.com/download/DSM/release/6.2.3/25426/DSM_DS3615xs_25426.pat">DSM 6.2.3</a></li>
 </ul>
 
-<p>После запуска сервера переходим <a href="https://find.synology.com/">https://find.synology.com/</a></p>
+<p>Переходим <a href="https://find.synology.com/">https://find.synology.com/</a></p>
 <p>Если веб-версия не находит сервер, то нужно скачать Synology Assistant и проверить настройки сети.</p>
 
 <img src="imgs/img-1.jpg" width="1028" height="583"/>
@@ -46,7 +46,7 @@
 
 <img src="imgs/img-18.jpg" width="1001" height="600"/>
 
-<p>Теперь необхоидмо перейти в Центр Пакетов</p>
+<p>Идем в Центр Пакетов</p>
 
 <img src="imgs/img-19.jpg" width="1064" height="583"/>
 
@@ -57,4 +57,4 @@
 <img src="imgs/img-25.jpg" width="950" height="568"/>
 
 
-<p>Далее необходимо добавить адресные книги и контакты.</p>
+<p>Как добавить адресные книги и контакты здесь.</p>

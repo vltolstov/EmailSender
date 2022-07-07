@@ -57,7 +57,7 @@ StarWind V2V.</p>
 <img src="imgs/img-19.jpg" width="958" height="550" />
 
 
-<p>Теперь необходимо создать два одинаковых диска, которые в последующем
+<p>Создаем два одинаковых диска, которые в последующем
 объединяться в RAID.</p>
 
 <img src="imgs/img-20.jpg" width="963" height="555" />
@@ -72,7 +72,7 @@ StarWind V2V.</p>
 
 <img src="imgs/img-25.jpg" width="959" height="549" />
 
-<p>Далее по аналогии создать и выбрать второй диск.</p>
+<p>Создаем и выбираем второй диск.</p>
 
 <img src="imgs/img-26.jpg" width="960" height="551" />
 
@@ -84,6 +84,5 @@ StarWind V2V.</p>
 
 <img src="imgs/img-28.jpg" width="962" height="552" />
 
-<p>Далее необходимо установить DSM.
-Инструкция по установке и настройке 
+<p>Инструкция по установке и настройке DSM 
 <a href="https://github.com/vltolstov/EmailSender/tree/master/Synology">здесь</a>.</p>
