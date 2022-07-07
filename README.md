@@ -40,7 +40,7 @@
  <h3>Synology Contacts</h3>
  <p>Пакет - основа для CardDav протокола и веб-интерфейс 
  для управления контактами и адресными книгами.</p>
-<p>Инструкции по настройке и установке <a href="https://github.com/vltolstov/EmailSender/tree/master/SynologyContacts">здесь</a></p>
+<p>Инструкции по настройке <a href="https://github.com/vltolstov/EmailSender/tree/master/SynologyContacts">здесь</a></p>
  
  
  <h3>CardDav Export</h3>
