@@ -6,13 +6,15 @@
     <base href="{{$baseUrl}}">
     <title>Mailer</title>
 
-    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link rel="shortcut icon" href="/favicon.ico" />
 </head>
 <body>
 
-тут
+<div class="qwe">
+    efw4r
+</div>
 
 </body>
 </html>
