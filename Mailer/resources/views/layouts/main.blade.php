@@ -9,16 +9,22 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link rel="shortcut icon" href="/favicon.ico" />
+
 </head>
 <body>
 
     <div class="container">
         <div class="row">
             <div class="col-lg-2">
-                sidebar
+                @include('sidebar')
             </div>
             <div class="col-lg-10">
-                content
+                @isset($addressbooks)
+                @section('addressbook-list')
+                @show
+                @endisset
+                @section('add-addressbook-form')
+                @show
             </div>
         </div>
     </div>
