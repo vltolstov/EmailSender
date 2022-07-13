@@ -12,9 +12,16 @@
 </head>
 <body>
 
-<div class="qwe">
-    efw4r
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                sidebar
+            </div>
+            <div class="col-lg-10">
+                content
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
