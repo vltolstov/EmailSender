@@ -19,10 +19,13 @@
                 @include('sidebar')
             </div>
             <div class="col-lg-10">
-                @isset($addressbooks)
-                @section('addressbook-list')
-                @show
-                @endisset
+
+                    @section('addressbook-list')
+                    @show
+
+                    @section('contact-list')
+                    @show
+
                 @section('add-addressbook-form')
                 @show
             </div>

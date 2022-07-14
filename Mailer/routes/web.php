@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 //use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\AddressbookController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,4 @@ Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 
 
 Route::resource('/addressbooks', AddressbookController::class);
-//Route::post('/addressbooks', [AddressbookController::class. 'store'])->name('add-addressbook');
+Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
