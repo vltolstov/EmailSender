@@ -1,5 +1,67 @@
 @media (min-width: 1200px) {
 
+    h2 {
+        margin-bottom: 20px;
+    }
 
+    .addressbook-list {
+        margin-bottom: 50px;
+    }
+
+    .ab-block {
+        border-bottom: 1px solid rgba(0,0,0,.15);
+    }
+
+    .ab-block p {
+        padding: 8px;
+        font-size: 14px;
+
+    }
+
+    .bord {
+        padding: 11px 15px 11px 15px;
+        border: 1px solid rgba(0,0,0,.15);
+        margin-top: 5px;
+        margin-bottom: 17px;
+    }
+
+    .form-error {
+        border: 1px solid rgba(255,0,0,.3);
+        background-color: rgba(255,0,0,.05);
+    }
+
+    .add-addressbook-form input {
+        border: none;
+        font-size: 16px;
+        line-height: 19px;
+        width: 100%;
+        background: none;
+    }
+
+    .form-button {
+        background-color: #2d3748;
+        border: 1px solid #2d3748;
+        color: #FFF;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 12px 40px;
+        text-align: center;
+    }
+
+    .delete-button {
+        float: right;
+        background-color: darkred;
+        border: 1px solid darkred;
+        color: #FFF;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 2px 8px;
+        text-align: center;
+        margin: 4px 5px 4px 0px;
+    }
 
 }

@@ -38,6 +38,10 @@ class AddressbookController extends Controller
         return redirect(route('addressbooks.index'));
     }
 
-
+    public function destroy(Addressbook $addressbook)
+    {
+        $addressbook->delete();
+        return redirect()->route('addressbooks.index');
+    }
 
 }
