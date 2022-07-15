@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\AddressbookController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CardDavController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,5 @@ Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 
 Route::resource('/addressbooks', AddressbookController::class);
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+
+Route::get('/test', [CardDavController::class, 'update'])->name('test');
