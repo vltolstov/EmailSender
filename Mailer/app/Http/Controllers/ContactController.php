@@ -13,9 +13,7 @@ class ContactController extends Controller
         $contacts = Contact::join('addressbooks', 'contacts.addressbook_id', '=', 'addressbooks.id')
         ->select(
             'contacts.id',
-            'contacts.name',
             'contacts.email',
-            'contacts.active',
             'addressbooks.name as addressbook_name'
         )
         ->simplePaginate(20);

@@ -14,6 +14,7 @@ class CardDav implements CardDavInterface
         curl_setopt($ch, CURLOPT_URL, $ip . '/carddav/Synology/' . $hash);
         curl_setopt($ch, CURLOPT_PORT, $port);
         curl_setopt($ch, CURLOPT_USERPWD, $login . ':' . $password);
+        //curl_setopt($ch, CURLOPT_USERPWD, 'synology:QW!@we23');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -23,6 +24,8 @@ class CardDav implements CardDavInterface
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         curl_close($ch);
+
+        var_dump($http_code);
 
         if($http_code == 200 && $data) {
             $pattern = "/[\._a-zA-Z0-9-]+@[\._a-zA-Z0-9-]+/";
