@@ -93,7 +93,30 @@
         display: inline-block;
         padding: 5px 10px;
         border: 1px solid rgba(0,0,0,.3);
-        color: #AAA;
+        color: #aaa;
     }
+
+    .reloadContacts {
+        width: 25px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .reload {
+        background: url('http://127.0.0.1:8000/images/reload.png') 5px 2px no-repeat;
+        background-size: 18px;
+    }
+
+    .loading {
+        background: url('http://127.0.0.1:8000/images/loading.gif') 5px 2px no-repeat;
+        background-size: 18px;
+    }
+
+    .complete {
+        background: url('http://127.0.0.1:8000/images/complete.png') 5px 2px no-repeat;
+        background-size: 18px;
+    }
+
 
 }
