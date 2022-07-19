@@ -6,7 +6,7 @@
     <base href="{{$baseUrl}}">
     <title>Mailer</title>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css'])
 
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -31,6 +31,8 @@
             </div>
         </div>
     </div>
+
+    @vite(['resources/js/app.js'])
 
 </body>
 </html>

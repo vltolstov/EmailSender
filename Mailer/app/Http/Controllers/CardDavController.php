@@ -36,7 +36,7 @@ class CardDavController extends Controller
 
         }
 
-        return redirect(route('index'));
+        return 'ok';
 
     }
 
