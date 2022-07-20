@@ -7,6 +7,7 @@
             <button type="button" class="reloadContacts reload"></button>
         </form>
     </li>
+    <li><a href="{{route('blocked')}}">Заблокированные контакты</a></li>
 </ul>
 
 

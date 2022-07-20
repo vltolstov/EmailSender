@@ -38,4 +38,4 @@ Route::resource('/addressbooks', AddressbookController::class);
 Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 
 Route::get('/update-contacts', [CardDavController::class, 'updateContacts']);
-
+Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])->name('blocked');
