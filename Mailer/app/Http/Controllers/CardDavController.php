@@ -9,7 +9,7 @@ use App\Models\Contact;
 class CardDavController extends Controller
 {
 
-    public function update(CardDav $cardDav)
+    public function updateContacts(CardDav $cardDav)
     {
 
         Contact::truncate();
