@@ -8,6 +8,7 @@
         </form>
     </li>
     <li><a href="{{route('blocked')}}">Заблокированные контакты</a></li>
+    <li><a href="{{route('mailing-templates')}}">Шаблоны</a></li>
 </ul>
 
 

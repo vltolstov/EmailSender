@@ -9,6 +9,7 @@ use App\Http\Controllers\AddressbookController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CardDavController;
 use App\Http\Controllers\ContactStatusesController;
+use App\Http\Controllers\MailingTemplateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,4 @@ Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 
 Route::get('/update-contacts', [CardDavController::class, 'updateContacts']);
 Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])->name('blocked');
+Route::get('/mailing-templates', [MailingTemplateController::class, 'index'])->name('mailing-templates');
