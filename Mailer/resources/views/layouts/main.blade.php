@@ -20,14 +20,21 @@
             </div>
             <div class="col-lg-10">
 
-                    @section('addressbook-list')
-                    @show
-
-                    @section('contact-list')
-                    @show
+                @section('addressbook-list')
+                @show
 
                 @section('add-addressbook-form')
                 @show
+
+                @section('contact-list')
+                @show
+
+                @section('templates')
+                @show
+
+                @section('add-template-form')
+                @show
+
             </div>
         </div>
     </div>
