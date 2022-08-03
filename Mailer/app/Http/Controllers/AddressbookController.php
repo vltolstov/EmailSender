@@ -12,7 +12,7 @@ class AddressbookController extends Controller
     {
         $addressbooks = Addressbook::all();
 
-        return view('addressbooks.addressbooks', [
+        return view('addressbooks.index', [
             'addressbooks' => $addressbooks,
         ]);
 

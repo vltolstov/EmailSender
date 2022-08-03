@@ -43,6 +43,6 @@
 
     <h2>Добавить новую адресную книгу</h2>
 
-    @include('addressbooks.add-addressbook-form')
+    @include('addressbooks.add')
 
 @endsection
