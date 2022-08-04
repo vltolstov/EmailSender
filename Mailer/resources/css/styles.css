@@ -16,11 +16,11 @@
         margin-bottom: 50px;
     }
 
-    .ab-block {
+    .list-block {
         border-bottom: 1px solid rgba(0,0,0,.15);
     }
 
-    .ab-block p {
+    .list-block p {
         padding: 8px;
         font-size: 14px;
 
