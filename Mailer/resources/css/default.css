@@ -148,6 +148,7 @@ p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, t
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     color: #393939;
+    border: none;
 }
 
 blockquote {

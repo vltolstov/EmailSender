@@ -28,4 +28,22 @@ class MailingTemplateController extends Controller
 
     }
 
+    public function store(Request $request)
+    {
+
+        $validationData = $request->validate([
+            'name' => ['required','string','max:50'],
+            'content' => ['required', 'string']
+        ]);
+
+        try {
+            MailingTemplate::create($validationData);
+        }
+        catch (QueryException $exception){
+            return redirect(route('mailing-templates.create'))->withErrors('Ошибки в форме');
+        }
+        return redirect(route('mailing-templates.index'));
+
+    }
+
 }

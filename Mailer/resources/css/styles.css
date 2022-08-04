@@ -32,13 +32,17 @@
         margin-top: 5px;
         margin-bottom: 17px;
     }
+    .bord-textarea {
+        margin-top: 5px;
+        margin-bottom: 17px;
+    }
 
     .form-error {
         border: 1px solid rgba(255,0,0,.3);
         background-color: rgba(255,0,0,.05);
     }
 
-    .add-addressbook-form input {
+    .add-addressbook-form input, .add-template-form input {
         border: none;
         font-size: 16px;
         line-height: 19px;
@@ -117,6 +121,5 @@
         background: url('http://127.0.0.1:8000/images/complete.png') 5px 2px no-repeat;
         background-size: 18px;
     }
-
 
 }
