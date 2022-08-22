@@ -21,11 +21,13 @@
                     <div class="col-lg-1 list-block"><p>{{$addressbook->server_port}}</p></div>
                     <div class="col-lg-4 list-block"><p>{{$addressbook->addressbook_hash}}</p></div>
                     <div class="col-lg-1 list-block">
-                        <form action="{{ route('addressbooks.destroy', $addressbook->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="delete-button">Х</button>
-                        </form>
+                        <div class="control-buttons">
+                            <form action="{{ route('addressbooks.destroy', $addressbook->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="delete-button"><span class="icon-exit"></span></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             @endforeach

@@ -46,4 +46,12 @@ class MailingTemplateController extends Controller
 
     }
 
+    public function destroy(MailingTemplate $mailingTemplate)
+    {
+
+        $mailingTemplate->delete();
+        return redirect()->route('mailing-templates.index');
+
+    }
+
 }

@@ -12,7 +12,7 @@
         margin-bottom: 8px;
     }
 
-    .addressbook-list {
+    .list {
         margin-bottom: 50px;
     }
 
@@ -63,17 +63,10 @@
     }
 
     .delete-button {
-        float: right;
-        background-color: darkred;
-        border: 1px solid darkred;
-        color: #FFF;
+        background: none;
+        border: none;
         cursor: pointer;
         display: inline-block;
-        font-size: 14px;
-        line-height: 18px;
-        padding: 2px 8px;
-        text-align: center;
-        margin: 4px 5px 4px 0px;
     }
 
     .navi {
@@ -120,6 +113,31 @@
     .complete {
         background: url('http://127.0.0.1:8000/images/complete.png') 5px 2px no-repeat;
         background-size: 18px;
+    }
+
+    .add-template-button {
+        float: right;
+        background-color: #2d3748;
+        border: 1px solid #2d3748;
+        color: #FFF;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 18px;
+        padding: 12px 40px;
+        text-align: center;
+    }
+
+    .control-buttons {
+        float: right;
+    }
+
+    .copy-icon {
+        width: 30px;
+    }
+
+    .edit-icon {
+        width: 30px;
     }
 
 }
