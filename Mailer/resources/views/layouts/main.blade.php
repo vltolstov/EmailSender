@@ -37,6 +37,9 @@
                 @section('add-template-form')
                 @show
 
+                @section('edit-template-form')
+                @show
+
             </div>
         </div>
     </div>

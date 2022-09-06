@@ -46,6 +46,27 @@ class MailingTemplateController extends Controller
 
     }
 
+    public function edit(MailingTemplate $mailingTemplate)
+    {
+        return view('mailing-templates.edit', [
+            'mailingTemplate' => $mailingTemplate,
+        ]);
+    }
+
+    public function update(Request $request, MailingTemplate $mailingTemplate)
+    {
+
+        $validationData = $request->validate([
+            'name' => ['required','string','max:50'],
+            'content' => ['required', 'string']
+        ]);
+
+        $mailingTemplate->update($validationData);
+
+        return redirect()->route('mailing-templates.index');
+
+    }
+
     public function destroy(MailingTemplate $mailingTemplate)
     {
 

@@ -23,7 +23,7 @@
                     <div class="col-lg-2 list-block"><p>{{$template->created_at}}</p></div>
                     <div class="col-lg-2 list-block">
                         <div class="control-buttons">
-                            <a href="#"><span class="icon-edit"></span></a>
+                            <a href="{{route('mailing-templates.edit', $template->id)}}"><span class="icon-edit"></span></a>
                             <a href="#"><span class="icon-copy"></span></a>
                             <form action="{{ route('mailing-templates.destroy', $template->id) }}" method="POST">
                                 @csrf
