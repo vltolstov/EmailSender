@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CardDavController;
 use App\Http\Controllers\ContactStatusesController;
 use App\Http\Controllers\MailingTemplateController;
+use App\Http\Controllers\MailingListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,3 +42,5 @@ Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])->na
 
 Route::get('/mailing-templates/{mailing_template}/copy', [MailingTemplateController::class, 'copy'])->name('copyTemplate');
 Route::resource('/mailing-templates', MailingTemplateController::class);
+
+Route::resource('/mailing-lists', MailingListController::class);

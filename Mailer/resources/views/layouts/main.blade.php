@@ -40,6 +40,12 @@
                 @section('edit-template-form')
                 @show
 
+                @section('mailing-lists')
+                @show
+
+                @section('add-mailinglist-form')
+                @show
+
             </div>
         </div>
     </div>

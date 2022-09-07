@@ -65,7 +65,7 @@ class MailingTemplateController extends Controller
 
     }
 
-    public function copy(Request $request, MailingTemplate $mailingTemplate)
+    public function copy(MailingTemplate $mailingTemplate)
     {
 
         $copyData = [

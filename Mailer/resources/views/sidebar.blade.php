@@ -9,8 +9,7 @@
     </li>
     <li><a href="{{route('blocked')}}">Заблокированные контакты</a></li>
     <li><a href="{{route('mailing-templates.index')}}">Шаблоны</a></li>
+    <li><a href="{{route('mailing-lists.index')}}">Рассылки</a></li>
 </ul>
-
-
 
 <div class="reloadContactsOut"></div>
