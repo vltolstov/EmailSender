@@ -39,4 +39,5 @@ Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
 Route::get('/update-contacts', [CardDavController::class, 'updateContacts']);
 Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])->name('blocked');
 
+Route::get('/mailing-templates/{mailing_template}/copy', [MailingTemplateController::class, 'copy'])->name('copyTemplate');
 Route::resource('/mailing-templates', MailingTemplateController::class);

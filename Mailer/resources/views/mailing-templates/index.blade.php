@@ -24,7 +24,7 @@
                     <div class="col-lg-2 list-block">
                         <div class="control-buttons">
                             <a href="{{route('mailing-templates.edit', $template->id)}}"><span class="icon-edit"></span></a>
-                            <a href="#"><span class="icon-copy"></span></a>
+                            <a href="{{route('copyTemplate', $template->id)}}"><span class="icon-copy"></span></a>
                             <form action="{{ route('mailing-templates.destroy', $template->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')

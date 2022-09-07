@@ -22,9 +22,7 @@ class MailingTemplateController extends Controller
     public function create()
     {
 
-        return view('mailing-templates.add', [
-            'test' => 'test',
-        ]);
+        return view('mailing-templates.add');
 
     }
 
@@ -64,6 +62,24 @@ class MailingTemplateController extends Controller
         $mailingTemplate->update($validationData);
 
         return redirect()->route('mailing-templates.index');
+
+    }
+
+    public function copy(Request $request, MailingTemplate $mailingTemplate)
+    {
+
+        $copyData = [
+            'name' => 'Копия ' . $mailingTemplate->name,
+            'content' => $mailingTemplate->content
+        ];
+
+        try {
+            MailingTemplate::create($copyData);
+        }
+        catch (QueryException $exception){
+            return redirect(route('mailing-templates.create'))->withErrors('Ошибки в форме');
+        }
+        return redirect(route('mailing-templates.index'));
 
     }
 
