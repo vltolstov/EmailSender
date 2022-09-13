@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class MailingList extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'id_addressbook',
+        'id_mailing_template',
+        'status'
+    ];
+
 }

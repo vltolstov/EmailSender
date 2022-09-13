@@ -151,6 +151,10 @@ p, th, td, li, dd, dt, ul, ol, blockquote, q, acronym, abbr, a, input, select, t
     border: none;
 }
 
+select {
+    width: 100%;
+}
+
 blockquote {
     margin: 1.25em;
     padding: 1.25em;
