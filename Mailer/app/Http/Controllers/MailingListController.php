@@ -90,4 +90,12 @@ class MailingListController extends Controller
 
     }
 
+    public function destroy(MailingList $mailingList)
+    {
+
+        $mailingList->delete();
+        return redirect()->route('mailing-lists.index');
+
+    }
+
 }
