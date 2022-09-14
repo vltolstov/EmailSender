@@ -43,4 +43,5 @@ Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])->na
 Route::get('/mailing-templates/{mailing_template}/copy', [MailingTemplateController::class, 'copy'])->name('copyTemplate');
 Route::resource('/mailing-templates', MailingTemplateController::class);
 
+Route::get('/mailing-lists/{mailing_list}/send', [MailingListController::class, 'send'])->name('sendMailingList');
 Route::resource('/mailing-lists', MailingListController::class);

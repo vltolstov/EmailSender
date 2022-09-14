@@ -14,9 +14,9 @@
             <div class="col-lg-3 list-block"><p>Название рассылки</p></div>
             <div class="col-lg-2 list-block"><p>Адресная книга</p></div>
             <div class="col-lg-3 list-block"><p>Шаблон</p></div>
-            <div class="col-lg-2 list-block"><p>Дата</p></div>
+            <div class="col-lg-1 list-block"><p>Дата</p></div>
             <div class="col-lg-1 list-block"><p>Статус</p></div>
-            <div class="col-lg-1 list-block"><p>&nbsp;</p></div>
+            <div class="col-lg-2 list-block"><p>&nbsp;</p></div>
         </div>
 
         @if($mailingLists->count() > 0)
@@ -25,10 +25,11 @@
                     <div class="col-lg-3 list-block"><p>{{$mailingList->name}}</p></div>
                     <div class="col-lg-2 list-block"><p>{{$mailingList->addressbook_name}}</p></div>
                     <div class="col-lg-3 list-block"><p>{{$mailingList->mailing_template_name}}</p></div>
-                    <div class="col-lg-2 list-block"><p>{{$mailingList->created_at}}</p></div>
+                    <div class="col-lg-1 list-block"><p>{{$mailingList->created_at->format('d-m-y')}}</p></div>
                     <div class="col-lg-1 list-block"><p>{{$mailingList->status}}</p></div>
-                    <div class="col-lg-1 list-block">
+                    <div class="col-lg-2 list-block">
                         <div class="control-buttons">
+                            <a href="{{route('sendMailingList', $mailingList->id)}}"><span class="icon-play"></span></a>
                             <a href="{{route('mailing-lists.edit', $mailingList->id)}}"><span class="icon-edit"></span></a>
                             <form action="{{route('mailing-lists.destroy', $mailingList->id)}}" method="POST">
                                 @csrf

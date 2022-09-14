@@ -43,12 +43,23 @@
 .icon-copy:before {
     display: inline-block;
     content: "\e903";
-    margin-top: 4px;
-    margin-bottom: 4px;
+    margin: 4px 10px 4px 0px;
     font-size: 24px;
     padding-right: 25px;
 }
 
 .icon-copy:hover {
     color: #2d3748;
+}
+
+.icon-play:before {
+    display: inline-block;
+    content: "\e904";
+    margin: 4px 10px 4px 0px;
+    font-size: 24px;
+    padding-right: 25px;
+}
+
+.icon-play:hover {
+    color: green;
 }

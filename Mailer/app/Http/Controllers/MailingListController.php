@@ -6,6 +6,7 @@ use App\Models\Addressbook;
 use App\Models\MailingList;
 use App\Models\MailingTemplate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class MailingListController extends Controller
 {
@@ -13,7 +14,7 @@ class MailingListController extends Controller
     public function index()
     {
 
-        $mailingLists = MailingList::join('addressbooks', 'mailing_lists.id_addressbook' , '=', 'addressbooks.id')
+        $mailingLists = MailingList::join('addressbooks', 'mailing_lists.id_addressbook', '=', 'addressbooks.id')
             ->join('mailing_templates', 'mailing_lists.id_mailing_template', '=', 'mailing_templates.id')
             ->select(
                 'mailing_lists.id',
@@ -46,7 +47,7 @@ class MailingListController extends Controller
     public function store(Request $request)
     {
         $validationData = $request->validate([
-            'name' => ['required','string','max:50'],
+            'name' => ['required', 'string', 'max:50'],
             'id_addressbook' => ['required', 'integer'],
             'id_mailing_template' => ['required', 'integer'],
             'status' => ['required', 'string']
@@ -54,14 +55,13 @@ class MailingListController extends Controller
 
         try {
             MailingList::create($validationData);
-        }
-        catch (QueryException $exception){
+        } catch (QueryException $exception) {
             return redirect(route('mailing-lists.create'))->withErrors('Ошибки в форме');
         }
         return redirect(route('mailing-lists.index'));
     }
 
-    public function edit(Request $request, MailingList $mailingList)
+    public function edit(MailingList $mailingList)
     {
 
         $addressbook = Addressbook::all();
@@ -79,7 +79,7 @@ class MailingListController extends Controller
     {
 
         $validationData = $request->validate([
-            'name' => ['required','string','max:50'],
+            'name' => ['required', 'string', 'max:50'],
             'id_addressbook' => ['required', 'integer'],
             'id_mailing_template' => ['required', 'integer'],
             'status' => ['required', 'string']
@@ -97,6 +97,15 @@ class MailingListController extends Controller
         $mailingList->delete();
         return redirect()->route('mailing-lists.index');
 
+    }
+
+    public function send(MailingList $mailingList)
+    {
+
+        //тут вся логика добавления в очередь
+        //и рассылки писем
+
+        return redirect()->route('mailing-lists.index');
     }
 
 }
