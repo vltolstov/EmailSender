@@ -46,6 +46,9 @@
                 @section('add-mailinglist-form')
                 @show
 
+                @section('edit-mailinglist-form')
+                @show
+
             </div>
         </div>
     </div>

@@ -60,4 +60,34 @@ class MailingListController extends Controller
         return redirect(route('mailing-lists.index'));
     }
 
+    public function edit(Request $request, MailingList $mailingList)
+    {
+
+        $addressbook = Addressbook::all();
+        $templates = MailingTemplate::all();
+
+        return view('mailing-lists.edit', [
+            'mailingList' => $mailingList,
+            'templates' => $templates,
+            'addressbooks' => $addressbook
+        ]);
+
+    }
+
+    public function update(Request $request, MailingList $mailingList)
+    {
+
+        $validationData = $request->validate([
+            'name' => ['required','string','max:50'],
+            'id_addressbook' => ['required', 'integer'],
+            'id_mailing_template' => ['required', 'integer'],
+            'status' => ['required', 'string']
+        ]);
+
+        $mailingList->update($validationData);
+
+        return redirect()->route('mailing-lists.index');
+
+    }
+
 }
