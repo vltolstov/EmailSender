@@ -23,6 +23,7 @@ class MailingListController extends Controller
                 'addressbooks.name as addressbook_name',
                 'mailing_templates.name as mailing_template_name'
             )
+            ->orderBy('id', 'desc')
             ->simplePaginate(20);
 
         return view('mailing-lists.index', [

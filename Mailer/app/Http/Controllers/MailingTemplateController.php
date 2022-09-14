@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\MailingTemplate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MailingTemplateController extends Controller
 {
@@ -11,7 +12,9 @@ class MailingTemplateController extends Controller
     public function index()
     {
 
-        $templates = MailingTemplate::all();
+        $templates = DB::table('mailing_templates')
+            ->orderBy('id', 'desc')
+            ->get();
 
         return view('mailing-templates.index', [
             'templates' => $templates,
