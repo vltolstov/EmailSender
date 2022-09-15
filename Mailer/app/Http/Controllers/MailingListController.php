@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\EmailShipped;
 use App\Models\Addressbook;
 use App\Models\MailingList;
 use App\Models\MailingTemplate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class MailingListController extends Controller
@@ -102,8 +104,15 @@ class MailingListController extends Controller
     public function send(MailingList $mailingList)
     {
 
+
         //тут вся логика добавления в очередь
         //и рассылки писем
+
+        $template = MailingTemplate::where('id', $mailingList->id_mailing_template)->first();
+
+        $subject = $mailingList->name;
+
+        Mail::to('admin@sumkiplus.ru')->send(new EmailShipped($template->content, $subject));
 
         return redirect()->route('mailing-lists.index');
     }
