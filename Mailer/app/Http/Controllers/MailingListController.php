@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Mail\EmailShipped;
 use App\Models\Addressbook;
+use App\Models\Contact;
 use App\Models\MailingList;
 use App\Models\MailingTemplate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Psr\Log\NullLogger;
 
 class MailingListController extends Controller
 {
@@ -104,15 +106,26 @@ class MailingListController extends Controller
     public function send(MailingList $mailingList)
     {
 
-
-        //тут вся логика добавления в очередь
-        //и рассылки писем
-
         $template = MailingTemplate::where('id', $mailingList->id_mailing_template)->first();
-
         $subject = $mailingList->name;
+        $contacts = Contact::leftJoin('contact_statuses', 'contacts.email', '=', 'contact_statuses.email')
+            ->select(
+              'contacts.id',
+              'contacts.email',
+              'contact_statuses.status'
+            )
+            ->where('addressbook_id', $mailingList->id_addressbook)
+            ->where('status', Null)
+            ->get();
 
-        Mail::to('admin@sumkiplus.ru')->send(new EmailShipped($template->content, $subject));
+        foreach ($contacts as $contact){
+            //var_dump($contact->email);
+            Mail::to($contact->email)->queue(new EmailShipped($template->content, $subject));
+        }
+
+        //die();
+
+        //дописать задержки, лимиты, обработчик ответов
 
         return redirect()->route('mailing-lists.index');
     }
