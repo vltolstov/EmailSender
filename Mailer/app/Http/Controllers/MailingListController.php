@@ -8,9 +8,7 @@ use App\Models\Contact;
 use App\Models\MailingList;
 use App\Models\MailingTemplate;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
-use Psr\Log\NullLogger;
 
 class MailingListController extends Controller
 {
@@ -119,13 +117,9 @@ class MailingListController extends Controller
             ->get();
 
         foreach ($contacts as $contact){
-            //var_dump($contact->email);
-            Mail::to($contact->email)->queue(new EmailShipped($template->content, $subject));
+            Mail::to($contact->email)
+                ->queue(new EmailShipped($template->content, $subject));
         }
-
-        //die();
-
-        //дописать задержки, лимиты, обработчик ответов
 
         return redirect()->route('mailing-lists.index');
     }

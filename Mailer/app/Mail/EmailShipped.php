@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Config;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -33,7 +34,15 @@ class EmailShipped extends Mailable
      */
     public function build()
     {
-        return $this->from('zakaz@sumkiplus.ru', 'ТканиПлюс')
+
+        $arr = [];
+        $config = Config::get();
+        foreach ($config as $item){
+            $arr[$item->name] = $item->value;
+        }
+
+        return $this->from($arr['from-email'], $arr['from-name'])
+                    ->replyTo($arr['reply-to-email'], $arr['reply-to-name'])
                     ->subject($this->subject)
                     ->view('emails.default');
     }
