@@ -15,7 +15,9 @@
             @foreach($contacts as $contact)
                 <div class="row">
                     <div class="col-lg-4 list-block"><p>{{$contact->email}}</p></div>
-                    <div class="col-lg-6 list-block"><p>{{$contact->addressbook_name}}</p></div>
+                    <div class="col-lg-6 list-block">
+                        <p>@if($contact->addressbook_name == null) &nbsp; @else {{$contact->addressbook_name}} @endif</p>
+                    </div>
                     <div class="col-lg-2 list-block"><p>{{$contact->status}}</p></div>
                 </div>
             @endforeach
