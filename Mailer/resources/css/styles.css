@@ -94,25 +94,26 @@
     }
 
     .reloadContacts {
-        width: 25px;
+        width: 18px;
         height: 20px;
         border: none;
         cursor: pointer;
+        background-color: #FFF;
+        background-image: url('http://127.0.0.1:8000/images/load.gif');
+        background-repeat: no-repeat;
+        background-size: 50px;
     }
 
     .reload {
-        background: url('http://127.0.0.1:8000/images/reload.png') 5px 2px no-repeat;
-        background-size: 18px;
+        background-position: 0px 2px;
     }
 
     .loading {
-        background: url('http://127.0.0.1:8000/images/loading.gif') 5px 2px no-repeat;
-        background-size: 18px;
+        background-position: -16px 2px;
     }
 
     .complete {
-        background: url('http://127.0.0.1:8000/images/complete.png') 5px 2px no-repeat;
-        background-size: 18px;
+        background-position: -34px 2px;
     }
 
     .add-template-button {
