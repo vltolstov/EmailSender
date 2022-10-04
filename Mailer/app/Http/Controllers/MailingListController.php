@@ -116,10 +116,13 @@ class MailingListController extends Controller
             ->where('status', Null)
             ->get();
 
-        foreach ($contacts as $contact){
-            Mail::to($contact->email)
-                ->queue(new EmailShipped($template->content, $subject));
-        }
+//        foreach ($contacts as $contact){
+//            Mail::to($contact->email)
+//                ->queue(new EmailShipped($template->content, $subject));
+//        }
+
+        $mailingList->status = 'Отправлено';
+        $mailingList->save();
 
         return redirect()->route('mailing-lists.index');
     }
