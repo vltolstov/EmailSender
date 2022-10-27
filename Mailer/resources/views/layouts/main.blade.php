@@ -6,7 +6,7 @@
     <base href="{{$baseUrl}}">
     <title>Mailer</title>
 
-    @vite(['resources/css/app.css'])
+    @vite('resources/css/app.css')
 
 {{--    <link rel="shortcut icon" href="/favicon.ico" />--}}
 
@@ -53,7 +53,7 @@
         </div>
     </div>
 
-    @vite(['resources/js/app.js'])
+    @vite('resources/js/app.js')
 
     <script>
         tinymce.init({

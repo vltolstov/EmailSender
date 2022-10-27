@@ -1,7 +1,7 @@
 @font-face {
     font-family:'icons';
-    src: url('http://127.0.0.1:8000/fonts/icons.woff') format('woff'),
-    url('http://127.0.0.1:8000/fonts/icons.ttf')  format('truetype');
+    src: url('/public/fonts/icons.woff') format('woff'),
+    url('/public/fonts/icons.ttf')  format('truetype');
     font-display: swap;
 }
 

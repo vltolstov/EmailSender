@@ -99,7 +99,7 @@
         border: none;
         cursor: pointer;
         background-color: #FFF;
-        background-image: url('http://127.0.0.1:8000/images/load.gif');
+        background-image: url('/public/images/load.gif');
         background-repeat: no-repeat;
         background-size: 50px;
     }
