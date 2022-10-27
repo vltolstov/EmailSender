@@ -29,7 +29,9 @@
                     <div class="col-lg-1 list-block"><p>{{$mailingList->status}}</p></div>
                     <div class="col-lg-2 list-block">
                         <div class="control-buttons">
-                            <a href="{{route('sendMailingList', $mailingList->id)}}"><span class="icon-play"></span></a>
+                            @if($mailingList->status !== 'Отправлено')
+                                <a href="{{route('sendMailingList', $mailingList->id)}}"><span class="icon-play"></span></a>
+                            @endif
                             <a href="{{route('mailing-lists.edit', $mailingList->id)}}"><span class="icon-edit"></span></a>
                             <form action="{{route('mailing-lists.destroy', $mailingList->id)}}" method="POST">
                                 @csrf
