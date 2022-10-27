@@ -47,7 +47,9 @@
                         @error('status')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
-                        <input type="text" name="status" placeholder="Статус" value="{{$mailingList->status}}" maxlength="150" class="input-name">
+                        <select name="status">
+                            <option value="{{$mailingList->status}}" selected>{{$mailingList->status}}</option>
+                        </select>
                     </div>
 
                     <div class="col-lg-3">
