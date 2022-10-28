@@ -34,14 +34,26 @@ Route::get('logout', [LogoutController::class, 'logout'])->name('logout');
 //Route::get('register', function (){return view('register');})->name('register');
 //Route::post('register', [RegisterController::class, 'save']);
 
-Route::resource('/addressbooks', AddressbookController::class);
-Route::get('/contacts', [ContactController::class, 'index'])->name('contacts');
+Route::resource('/addressbooks', AddressbookController::class)
+    ->middleware('auth');
+Route::get('/contacts', [ContactController::class, 'index'])
+    ->middleware('auth')
+    ->name('contacts');
 
-Route::get('/update-contacts', [CardDavController::class, 'updateContacts']);
-Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])->name('blocked');
+Route::get('/update-contacts', [CardDavController::class, 'updateContacts'])
+    ->middleware('auth');
+Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])
+    ->middleware('auth')
+    ->name('blocked');
 
-Route::get('/mailing-templates/{mailing_template}/copy', [MailingTemplateController::class, 'copy'])->name('copyTemplate');
-Route::resource('/mailing-templates', MailingTemplateController::class);
+Route::get('/mailing-templates/{mailing_template}/copy', [MailingTemplateController::class, 'copy'])
+    ->middleware('auth')
+    ->name('copyTemplate');
+Route::resource('/mailing-templates', MailingTemplateController::class)
+    ->middleware('auth');
 
-Route::get('/mailing-lists/{mailing_list}/send', [MailingListController::class, 'send'])->name('sendMailingList');
-Route::resource('/mailing-lists', MailingListController::class);
+Route::get('/mailing-lists/{mailing_list}/send', [MailingListController::class, 'send'])
+    ->middleware('auth')
+    ->name('sendMailingList');
+Route::resource('/mailing-lists', MailingListController::class)
+    ->middleware('auth');
