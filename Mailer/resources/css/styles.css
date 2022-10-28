@@ -9,7 +9,9 @@
     }
 
     .sidebar li {
+        list-style: none;
         margin-bottom: 8px;
+        overflow: hidden;
     }
 
     .list {
@@ -17,6 +19,7 @@
     }
 
     .list-block {
+        height: 35px;
         border-bottom: 1px solid rgba(0,0,0,.15);
     }
 
@@ -93,7 +96,14 @@
         color: #aaa;
     }
 
+    .sidebarContacts {
+        float: left;
+        padding: 0px 6px 0px 0px;
+    }
+
     .reloadContacts {
+        display: inline-block;
+        float: left;
         width: 18px;
         height: 20px;
         border: none;
@@ -105,15 +115,15 @@
     }
 
     .reload {
-        background-position: 0px 2px;
+        background-position: 0px 0px;
     }
 
     .loading {
-        background-position: -16px 2px;
+        background-position: -16px 0px;
     }
 
     .complete {
-        background-position: -34px 2px;
+        background-position: -34px 0px;
     }
 
     .add-template-button {

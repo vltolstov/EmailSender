@@ -1,5 +1,5 @@
 
-// reloadContacts 0.1
+// reloadContacts 0.9.1
 
 function reloadContacts()
 {
@@ -16,9 +16,6 @@ function reloadContacts()
         if(this.readyState == 4 && this.status == '200') {
             icon.classList.remove('loading');
             icon.classList.add('complete');
-
-            console.log(this.responseText);
-
         }
     };
     xhttp.send();
