@@ -3,7 +3,7 @@
 <h2>Установка и запуск</h2>
 
 user и app изменить на свои:
-
+```
 1.  Настраиваем или оставляем .env, .htaccess
 2.  Копируем копию из гита
 3.  Перезалить дамп базы если были изменения или запустить миграции
@@ -19,3 +19,4 @@ user и app изменить на свои:
 13. sudo supervisorctl reread
 14. sudo supervisorctl update
 15. sudo supervisorctl start laravel-worker:*
+```
