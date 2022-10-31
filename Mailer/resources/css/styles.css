@@ -35,6 +35,16 @@
         margin-top: 5px;
         margin-bottom: 17px;
     }
+
+    .bord input {
+        width: 100%;
+    }
+
+    .bord select {
+        font-size: 16px;
+        background: #FFF;
+    }
+
     .bord-textarea {
         margin-top: 5px;
         margin-bottom: 17px;
