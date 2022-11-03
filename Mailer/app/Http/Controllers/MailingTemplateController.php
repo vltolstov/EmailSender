@@ -94,4 +94,14 @@ class MailingTemplateController extends Controller
 
     }
 
+    public static function unsubscribe($email)
+    {
+
+        $text = view('mailing-templates/unsubscribe-text', [
+            'email' => $email
+        ]);
+
+        return $text;
+    }
+
 }

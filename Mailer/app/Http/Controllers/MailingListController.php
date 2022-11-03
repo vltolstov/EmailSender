@@ -117,8 +117,13 @@ class MailingListController extends Controller
             ->get();
 
         foreach ($contacts as $contact){
+
+            $unSubscribeText = MailingTemplateController::unsubscribe($contact->email);
+            $content = "$template->content $unSubscribeText";
+
             Mail::to($contact->email)
-                ->queue(new EmailShipped($template->content, $subject));
+                ->queue(new EmailShipped($content, $subject));
+
         }
 
         $mailingList->status = 'Отправлено';

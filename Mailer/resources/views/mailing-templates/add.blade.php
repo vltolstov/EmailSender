@@ -21,7 +21,8 @@
                         @error('content')
                         <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
-                        <textarea name="content" id="content"></textarea>
+                        <textarea name="content" id="content">
+                        </textarea>
                     </div>
                     <div class="col-lg-3">
                         <button type="submit" class="form-button">Сохранить</button>

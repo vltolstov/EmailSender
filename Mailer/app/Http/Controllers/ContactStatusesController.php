@@ -26,4 +26,22 @@ class ContactStatusesController extends Controller
             'contacts' => $contacts,
         ]);
     }
+
+
+    public function addBlockedContact($email = null)
+    {
+
+        if($email){
+            ContactStatus::insert([
+                'email' => $email,
+                'status' => 1
+            ]);
+        }
+
+        return view('unsubscribe', [
+            'email' => $email,
+        ]);
+
+    }
+
 }

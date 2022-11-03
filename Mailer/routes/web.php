@@ -45,6 +45,8 @@ Route::get('/update-contacts', [CardDavController::class, 'updateContacts'])
 Route::get('/blocked-contacts', [ContactStatusesController::class, 'index'])
     ->middleware('auth')
     ->name('blocked');
+Route::get('/unsubscribe/{email?}', [ContactStatusesController::class, 'addBlockedContact'])
+    ->name('unsubscribe');
 
 Route::get('/mailing-templates/{mailing_template}/copy', [MailingTemplateController::class, 'copy'])
     ->middleware('auth')
