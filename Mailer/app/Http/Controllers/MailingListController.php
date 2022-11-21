@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\EmailShipped;
 use App\Models\Addressbook;
+use App\Models\Config;
 use App\Models\Contact;
 use App\Models\MailingList;
 use App\Models\MailingTemplate;
@@ -104,6 +105,12 @@ class MailingListController extends Controller
     public function send(MailingList $mailingList)
     {
 
+        $arr = [];
+        $config = Config::get();
+        foreach ($config as $item){
+            $arr[$item->name] = $item->value;
+        }
+
         $template = MailingTemplate::where('id', $mailingList->id_mailing_template)->first();
         $subject = $mailingList->name;
         $contacts = Contact::leftJoin('contact_statuses', 'contacts.email', '=', 'contact_statuses.email')
@@ -122,8 +129,17 @@ class MailingListController extends Controller
             $content = "$template->content $unSubscribeText";
 
             Mail::to($contact->email)
-                ->queue(new EmailShipped($content, $subject));
-
+                ->queue(new EmailShipped(
+                    $content,
+                    $subject,
+                    $contact->email,
+                    $arr['from-email'],
+                    $arr['from-name'],
+                    $arr['reply-to-email'],
+                    $arr['reply-to-name'],
+                    $arr['baseUrl']
+                    )
+                );
         }
 
         $mailingList->status = 'Отправлено';
