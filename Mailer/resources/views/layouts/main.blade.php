@@ -58,8 +58,8 @@
     <script>
         tinymce.init({
             selector: 'textarea',
-            plugins: 'image autolink lists media table',
-            toolbar: 'styleselect bold italic alignleft aligncenter alignright a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+            plugins: 'image autolink lists media table textcolor',
+            toolbar: 'styleselect bold italic alignleft aligncenter alignright a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents forecolor backcolor',
             toolbar_mode: 'floating',
             tinycomments_mode: 'embedded',
             language: 'ru',
